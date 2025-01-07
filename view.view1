@@ -1,0 +1,201 @@
+<mvc:View controllerName="com.kt.sap.view.project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+
+	<content>
+		<IconTabBar
+		id="idIconTabBar"
+		class="sapUiResponsiveContentPadding"
+		
+		
+		>
+		<items>
+		<IconTabFilter  icon="sap-icon://create-form" text="{i18n>first_icon}" key="Empinfo" class="stickyIconTabBar">
+				<VBox >
+       <f:SimpleForm id="idMyform" 	editable="true" 
+			title="{i18n>Form_tile}"
+            	labelSpanXL="4"
+					labelSpanL="4"
+					labelSpanM="12"
+					labelSpanS="12"
+					adjustLabelSpan="false"
+					emptySpanXL="0"
+					emptySpanL="0"
+					emptySpanM="0"
+					emptySpanS="0"
+					columnsXL="2"
+					columnsL="2"
+					columnsM="3"
+			singleContainerFullSize="false">
+
+                    <core:Title text="{i18n>core_title}"/>
+
+              	<Label text="{i18n>SlNo}"  labelFor="slno"/>
+				<Input id="idSlno" type="Number"/>
+                <Label text="{i18n>Name}"  labelFor="Name"/>
+				<Input id="idNmae" />
+                <Label text="{i18n>Mobile_number}"  labelFor="Mnumber"/>
+				<Input id="idM_number"  type="Number"/>
+				<Label text="{i18n>Email}"  labelFor="mail"/>
+				<Input id="idMail"  type="Email"/>
+                <Label text="{i18n>Date_of_birth}"  labelFor="Dob"/>
+				<Input id="idDob" type="Date"/>
+				<core:Title text="{i18n>sec_core_title}" />
+                <Label text="{i18n>skill}"  labelFor="Skill"/>
+				<Input id="idSkill" />
+                <Label text="{i18n>total_exp}"  labelFor="TExp"/>
+				<Input id="idT_Exp" type="Number" />
+                <Label text="{i18n>relevant_exp}"  labelFor="RExp"/>
+				<Input id="idRe_Exp" type="Number" />
+                <Label text="CTC"  labelFor="Ctc"/>
+                <Input id="idCtc" type="Number"/>
+                <Label text="{i18n>Ectc}"  labelFor="ECtc"/>
+                <Input id="idECtc" type="Number"/>
+                <Label text="{i18n>notic_period}" />
+                	<Select
+					forceSelection="true"
+					>
+					<core:Item key="1_month" text="{i18n>1month}" />
+                    <core:Item key="2_month" text="{i18n>2month}" />
+                    <core:Item key="1_week" text="{i18n>1week}" />
+                    <core:Item key="3_week" text="{i18n>3week}" />
+				</Select>
+                <Label text="{i18n>how_soon}" />
+
+                        <Select
+					forceSelection="true"
+					>
+					<core:Item key="11_month" text="{i18n>1month}" />
+                    <core:Item key="22_month" text="{i18n>2month}" />
+                    <core:Item key="11_week" text="{i18n>1week}" />
+                    <core:Item key="33_week" text="{i18n>3week}" />
+				</Select>
+                <Label text="{i18n>current_location}" />
+                <TextArea rows="4" id="id_curr_location"/>
+                 <Label text="{i18n>new_location}" />
+                <TextArea rows="4" id="id_New_location" />
+                
+                	<Label text="{i18n>inst_to_relocate}" labelFor="Interested to relocate" />
+			<RadioButtonGroup id="idFirstgroup1" columns="5" class="sapUiMediumMarginBottom">
+			<RadioButton id="idYes" text="{i18n>yes}" />
+			<RadioButton id="IdNo" text="{i18n>no}" />
+			
+		      </RadioButtonGroup>
+             <Label text="{i18n>interview_date}" labelFor="interviewdate"/>
+             <Input id="idInterview" type="Date"/>
+             <Label text="Selected For InterView" labelFor="Selected For InterView" />
+			<RadioButtonGroup id="idsecgroup" columns="4" class="sapUiMediumMarginBottom">
+			<RadioButton id="idYes1" text="{i18n>yes}" />
+			<RadioButton id="IdNo1" text="{i18n>no}" />
+			
+		      </RadioButtonGroup>
+
+               <Label text="{i18n>finished_interview}" labelFor="Finished Interview" />
+					<RadioButtonGroup id="idgroup3" columns="4" class="sapUiMediumMarginBottom">
+			<RadioButton id="idYes2" text="{i18n>yes}" />
+			<RadioButton id="IdNo2" text="No" />
+			
+		      </RadioButtonGroup>
+              <Label text="{i18n>res_for_not_taking_in}"  />
+           <TextArea rows="4" id="idReasonFor_not" />
+          
+       </f:SimpleForm>
+	   
+
+      
+       </VBox>
+			</IconTabFilter>
+			<IconTabFilter icon="sap-icon://family-care" text="{i18n>sec_icon}" key="Empattachments" count="4" class="stickyIconTabBar">
+				<Table mode="SingleSelectLeft" alternateRowColors="true" busy="false" >
+
+				 <columns>
+				 <Column >
+				 <Text  text="{i18n>Name}"/>
+				 </Column>
+				  <Column >
+				 <Text  text="{i18n>education}"/>
+				 </Column>
+				   <Column >
+				 <Text  text="{i18n>percentage}"/>
+				 </Column>
+				   <Column >
+				 <Text  text="{i18n>profession}"/>
+				 </Column>
+				 </columns>
+				 <items>
+				 <ColumnListItem >
+				 <cells>
+				 <Text text="Sai j behera"></Text>
+				  <Text text="Graduation"></Text>
+				  <Text text="75%"></Text>
+				  <Text text="Software developer"></Text>
+				 </cells>
+				 </ColumnListItem>
+				  <ColumnListItem >
+				 <cells>
+				 <Text text=" kiranmayee Datti "></Text>
+				  <Text text="B.tech"></Text>
+				  <Text text="75%"></Text>
+				  <Text text="Software developer"></Text>
+				 </cells>
+				 </ColumnListItem>
+				  <ColumnListItem >
+				 <cells>
+				 <Text text="Rani Sindy"></Text>
+				  <Text text="Diploma"></Text>
+				  <Text text="75%"></Text>
+				  <Text text="Software developer"></Text>
+				 </cells>
+				 </ColumnListItem>
+				  <ColumnListItem >
+				 <cells>
+				 <Text text="Pavan kadam"></Text>
+				  <Text text="BCA"></Text>
+				  <Text text="75%"></Text>
+				  <Text text="Software developer"></Text>
+				 </cells>
+				 </ColumnListItem>
+				 </items>
+
+				</Table>
+
+			</IconTabFilter>
+			<IconTabFilter  icon="sap-icon://notes"  text="{i18n>note_icon}" key="notes" class="stickyIconTabBar">
+				<Text text="There is some note..." busy="true" />
+			</IconTabFilter>
+			<IconTabFilter icon="sap-icon://add-contact" text="{i18n>contact}" key="contact" class="stickyIconTabBar">
+			<HBox ></HBox>
+			   <f:SimpleForm editable="true" id="idcontactform"  >
+			   <core:Title text="{i18n>contact_form}"/>
+			         <Label text="{i18n>Mobile_number}" labelFor="number"/>
+					 <Input type="Number" id="idnumber"  width="300px"/>
+					      <Label text="{i18n>Email}" labelFor="mail"/>
+					 <Input type="Email" id="idemail" width="auto"></Input>
+                <Button text="{i18n>add}" width="300px" ></Button>
+			   </f:SimpleForm>
+			</IconTabFilter>
+		</items>
+	</IconTabBar>
+	
+	
+
+	   
+</content>
+   <footer >
+            <Toolbar>
+                <ToolbarSpacer />
+               <Button
+			text="Submit"
+			type="Accept"
+			class="sapMBtnEmphasized"
+			press="onSubmitMessageBoxPress"
+			width="280px"
+			ariaHasPopup="Dialog" />
+             
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>
